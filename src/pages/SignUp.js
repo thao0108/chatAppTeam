@@ -1,13 +1,20 @@
 import React, { useState } from 'react'
 import firebase from '../config/firebase'
 
-const SignUp = () => {
+const SignUp = ({ history }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [name, setName] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
         firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(({ user }) => {
+                user.updateProfile({
+                    displayName: name
+                })
+                history.push("/login")
+            })
             .catch(err => {
                 console.log(err)
             })
@@ -25,7 +32,7 @@ const SignUp = () => {
                         id='email'
                         placeholder='Email'
                         onChange={e => {
-                            setEmail(e.target.email)
+                            setEmail(e.target.value)
                         }}
                     />
                 </div>
@@ -37,11 +44,24 @@ const SignUp = () => {
                         id='password'
                         placeholder='Password'
                         onChange={e => {
-                            setPassword(e.target.password)
+                            setPassword(e.target.value)
+                        }}
+                    />
+                </div>
+                <div>
+                    <label htmlFor='名前'>名前</label>
+                    <input
+                        name='name'
+                        type='name'
+                        id='name'
+                        placeholder='名前'
+                        onChange={e => {
+                            setName(e.target.value)
                         }}
                     />
                 </div>
                 <button type='submit'>Sign Up</button>
+                <div><a href="/login">ログイン</a></div>
             </form>
         </div>
     )

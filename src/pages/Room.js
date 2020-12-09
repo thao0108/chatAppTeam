@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import firebase from '../config/firebase'
+import { AuthContext } from '../AuthService'
 
 const Room = () => {
     const [messages, setMessages] = useState(null)
@@ -16,6 +17,28 @@ const Room = () => {
             })
     }, [])
 
+    const user = useContext(AuthContext)
+    firebase.firestore().collection('messages')
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        setValue('')
+        firebase.firestore().collection('messages').add({
+            user: user.displayName,
+            content: value,
+            date: new Date()
+        })
+        setMessages([
+            ...messages,
+            {
+                user: user.displayName,
+                email: user.email,
+                content: value
+
+            }
+        ])
+    }
+
     return (
         <>
             <h1>Room</h1>
@@ -23,9 +46,15 @@ const Room = () => {
                 <li>
                     sample user : sample message
                 </li>
-
+                {
+                    messages ?
+                        messages.map(message => (
+                            <li>{message.user}: {message.content}</li>
+                        )) :
+                        <p>...loading</p>
+                }
             </ul>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input
                     type='text'
                     value={value}

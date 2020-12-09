@@ -35,7 +35,7 @@ const Login = ({ history }) => {
                         name='email'
                         placeholder='Email'
                         onChange={e => {
-                            setEmail(e.target.email)
+                            setEmail(e.target.value)
                         }}
                     />
                 </div>
@@ -47,12 +47,13 @@ const Login = ({ history }) => {
                         name='email'
                         placeholder='password'
                         onChange={e => {
-                            setPassword(e.target.password)
+                            setPassword(e.target.value)
                         }}
                     />
                 </div>
                 <button type='submit'>Login</button>
             </form>
+            <div><a href="/signup">新規登録</a></div>
         </>
     )
 }
