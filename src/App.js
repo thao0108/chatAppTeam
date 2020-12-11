@@ -11,18 +11,23 @@ import SignUp from './pages/SignUp'
 import Room from './pages/Room'
 import { AuthProvider } from './AuthService'
 import LoggedInRoute from './LoggedInRoute'
+import classes from './style.module.css'
 
 const App = () => {
     return (
-        <AuthProvider>
-            <Router>
-                <Switch>
-                    <LoggedInRoute exact path='/' component={Room} />
-                    <Route exact path='/Login' component={Login} />
-                    <Route exact path='/SignUp' component={SignUp} />
-                </Switch>
-            </Router>
-        </AuthProvider>
+        <>
+            <header className={classes.App}>head</header>
+            <AuthProvider>
+                <Router>
+                    <Switch>
+                        <LoggedInRoute exact path='/' component={Room} />
+                        <Route exact path='/Login' component={Login} />
+                        <Route exact path='/SignUp' component={SignUp} />
+                    </Switch>
+                </Router>
+            </AuthProvider>
+            <footer className={classes.App}>footer</footer>
+        </>
     )
 }
 
