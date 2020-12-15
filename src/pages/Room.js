@@ -62,7 +62,7 @@ const Room = () => {
                 />
                 <button type="submit">送信</button>
             </form>
-            <button onClick={() => firebase.auth().signOut()}>Logout</button>
+            {/* <button onClick={() => firebase.auth().signOut()}>Logout</button> */}
         </>
     )
 }
