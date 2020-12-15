@@ -12,6 +12,8 @@ import Room from './pages/Room'
 import { AuthProvider } from './AuthService'
 import LoggedInRoute from './LoggedInRoute'
 import classes from './style.module.css'
+import Menubar from './Menubar'
+
 
 const App = () => {
     return (
@@ -20,6 +22,7 @@ const App = () => {
             <p>テスト</p>
             <AuthProvider>
                 <Router>
+                <Menubar/>
                     <Switch>
                         <LoggedInRoute exact path='/' component={Room} />
                         <Route exact path='/Login' component={Login} />
