@@ -17,7 +17,7 @@ const App = () => {
     return (
         <>
             <header className={classes.App}>head</header>
-            <p>テスト</p>
+            <p>うおーー</p>
             <AuthProvider>
                 <Router>
                     <Switch>
