@@ -1,4 +1,10 @@
 .App {
+    background-color: bisque;
     color: skyblue;
     text-align: center;
+}
+
+.Room {
+    display: block;
+    margin:0 0 0 auto;
 }
