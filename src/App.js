@@ -9,6 +9,7 @@ import {
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import Room from './pages/Room'
+import TabList from './tab/TabList'
 import { AuthProvider } from './AuthService'
 import LoggedInRoute from './LoggedInRoute'
 import classes from './style.module.css'
@@ -25,6 +26,7 @@ const App = () => {
                 <Menubar/>
                     <Switch>
                         <LoggedInRoute exact path='/' component={Room} />
+                        <Route exact path='/recommend' component={TabList} />
                         <Route exact path='/Login' component={Login} />
                         <Route exact path='/SignUp' component={SignUp} />
                     </Switch>
