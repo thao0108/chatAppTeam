@@ -10,7 +10,7 @@ const TabList = () => {
             <Tab eventKey="鎌田　希望" title="鎌田　希望">
                 {/* おすすめ機能内容 */}
             </Tab>
-            <Tab eventKey="高野　大吾" title="高野　大吾">
+            <Tab eventKey="高野　大梧" title="高野　大梧">
                 {/* おすすめ機能内容 */}
             </Tab>
             <Tab eventKey="ファムフォンタオ" title="ファムフォンタオ" >
