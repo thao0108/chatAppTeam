@@ -14,7 +14,7 @@ const Writings = () => {
                 <tr><td>高野大梧</td>
                     <td>目標</td>
                     <td>感想</td></tr>
-                <tr><td>ファムファンタオ</td>
+                <tr><td>ファムフォンタオ</td>
                     <td>目標</td>
                     <td>感想</td></tr>
             </table>
