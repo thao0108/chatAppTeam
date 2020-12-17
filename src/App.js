@@ -14,18 +14,19 @@ import { AuthProvider } from './AuthService'
 import LoggedInRoute from './LoggedInRoute'
 import classes from './style.module.css'
 import Menubar from './Menubar'
+import Writings from './writings/Writings'
 
 
 const App = () => {
     return (
         <>
             <header className={classes.App}>head</header>
-            <p>テスト</p>
             <AuthProvider>
                 <Router>
-                <Menubar/>
+                    <Menubar />
                     <Switch>
                         <LoggedInRoute exact path='/' component={Room} />
+                        <Route exact path='/album' component={Writings} />
                         <Route exact path='/recommend' component={TabList} />
                         <Route exact path='/Login' component={Login} />
                         <Route exact path='/SignUp' component={SignUp} />

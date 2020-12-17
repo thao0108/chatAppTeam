@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
-import classes from '../style.module.css'
 
 const Room = () => {
     const [messages, setMessages] = useState(null)
@@ -42,7 +41,6 @@ const Room = () => {
 
     return (
         <>
-            <button className={classes.Room} onClick={() => firebase.auth().signOut()}>Logout</button>
             <h1>Room</h1>
             <ul>
                 <li>
