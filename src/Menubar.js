@@ -12,7 +12,7 @@ const Menubar = () => {
           <Nav.Link href="/todo">TODO</Nav.Link>
           <Nav.Link href="/album">卒業アルバム</Nav.Link>
           <Nav.Link href="/recommend">おすすめ</Nav.Link>
-          <Nav.Link href="/profile">Profile</Nav.Link>
+          <Nav.Link href="/profile">PROFILE</Nav.Link>
         </Nav>
         <Form inline>
           <Button variant="dark" onClick={() => firebase.auth().signOut()}>Logout</Button>
