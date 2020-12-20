@@ -1,10 +1,16 @@
 import React, { useEffect, useState, useContext } from 'react'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
+import styles from '../room.module.css'
+import NoProfile from '../img/no-profile.png'
 
 const Room = () => {
     const [messages, setMessages] = useState(null)
+    const [image, setImage] = useState('')
     const [value, setValue] = useState('')
+
+    const user = useContext(AuthContext)
+    firebase.firestore().collection('messages')
 
     useEffect(() => {
         firebase.firestore().collection('messages')
@@ -15,16 +21,21 @@ const Room = () => {
 
                 setMessages(messages)
             })
-    }, [])
+        firebase.storage().ref().child(`image/${user.uid}/profile`)
+            .getDownloadURL().then((downloadURL) => {
+            setImage(downloadURL)
+            })     
+    }, [user])
+    console.log(image)
 
-    const user = useContext(AuthContext)
-    firebase.firestore().collection('messages')
+
 
     const handleSubmit = e => {
         e.preventDefault()
         setValue('')
         firebase.firestore().collection('messages').add({
             user: user.displayName,
+            image: image,
             content: value,
             date: new Date()
         })
@@ -32,12 +43,14 @@ const Room = () => {
             ...messages,
             {
                 user: user.displayName,
+                image: image,
                 email: user.email,
                 content: value
 
             }
         ])
     }
+    console.log(messages)
 
     return (
         <>
@@ -48,8 +61,16 @@ const Room = () => {
                 </li>
                 {
                     messages ?
-                        messages.map(message => (
-                            <li>{message.user}: {message.content}</li>
+                    messages.map((message, index) => (
+                        <li className={styles.chat} key={index}>    
+                            <div className={styles.avatar}>
+                                <img src={message.image ? message.image : NoProfile} className={styles.image} alt="チャットアイコン"/>
+                            </div>
+                            <div>
+                                {message.user}: {message.content}
+                            </div>
+                            
+                        </li>
                         )) :
                         <p>...loading</p>
                 }
