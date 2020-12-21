@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from 'react'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
 import styles from '../room.module.css'
-import NoProfile from '../img/no-profile.png.jpg'
+import NoProfile from '../img/no-profile.png'
 
 
 const Room = () => {
@@ -15,6 +15,7 @@ const Room = () => {
 
     useEffect(() => {
         firebase.firestore().collection('messages')
+            // .orderBy('timestamp', 'desc')
             .onSnapshot((snapshot) => {
                 const messages = snapshot.docs.map(doc => {
                     return doc.data()
@@ -22,13 +23,12 @@ const Room = () => {
 
                 setMessages(messages)
             })
+
         firebase.storage().ref().child(`image/${user.uid}/profile`)
             .getDownloadURL().then((downloadURL) => {
-
-
-
+                setImage(downloadURL)
+            })
     }, [user])
-    console.log(image)
 
 
 
@@ -58,23 +58,18 @@ const Room = () => {
         <>
             <h1>Room</h1>
             <ul>
-                <li>
-                    sample user : sample message
-                </li>
                 {
                     messages ?
+                        messages.map((message, index) => (
+                            <li className={styles.chat} key={index}>
+                                <div className={styles.avatar}>
+                                    <img src={message.image ? message.image : NoProfile} className={styles.image} alt="チャットアイコン" />
+                                </div>
+                                <div>
+                                    {message.user}: {message.content}
+                                </div>
 
-=======
-                    messages.map((message, index) => (
-                        <li className={styles.chat} key={index}>    
-                            <div className={styles.avatar}>
-                                <img src={message.image ? message.image : NoProfile} className={styles.image} alt="チャットアイコン"/>
-                            </div>
-                            <div>
-                                {message.user}: {message.content}
-                            </div>
-                            
-                        </li>
+                            </li>
                         )) :
                         <p>...loading</p>
                 }
@@ -91,5 +86,6 @@ const Room = () => {
         </>
     )
 }
+
 
 export default Room

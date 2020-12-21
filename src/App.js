@@ -26,18 +26,16 @@ const App = () => {
 
             <AuthProvider>
                 <Router>
-                    <Menubar/>
+                    <Menubar />
                     <Container>
-
-=======
-                    <Switch>
-                        <Route exact path='/Login' component={Login} />
-                        <Route exact path='/SignUp' component={SignUp} />
-                        <LoggedInRoute exact path='/' component={Room} />
-                        <Route exact path='/album' component={Writings} />
-                        <Route exact path='/profile' component={Profile} />
-                        <Route exact path='/recommend' component={TabList} />
-                    </Switch>
+                        <Switch>
+                            <Route exact path='/Login' component={Login} />
+                            <Route exact path='/SignUp' component={SignUp} />
+                            <LoggedInRoute exact path='/' component={Room} />
+                            <Route exact path='/album' component={Writings} />
+                            <Route exact path='/profile' component={Profile} />
+                            <Route exact path='/recommend' component={TabList} />
+                        </Switch>
                     </Container>
                 </Router>
             </AuthProvider>
