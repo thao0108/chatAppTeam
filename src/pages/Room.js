@@ -2,7 +2,8 @@ import React, { useEffect, useState, useContext } from 'react'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
 import styles from '../room.module.css'
-import NoProfile from '../img/no-profile.png'
+import NoProfile from '../img/no-profile.png.jpg'
+
 
 const Room = () => {
     const [messages, setMessages] = useState(null)
@@ -23,8 +24,9 @@ const Room = () => {
             })
         firebase.storage().ref().child(`image/${user.uid}/profile`)
             .getDownloadURL().then((downloadURL) => {
-            setImage(downloadURL)
-            })     
+
+
+
     }, [user])
     console.log(image)
 
@@ -61,6 +63,8 @@ const Room = () => {
                 </li>
                 {
                     messages ?
+
+=======
                     messages.map((message, index) => (
                         <li className={styles.chat} key={index}>    
                             <div className={styles.avatar}>

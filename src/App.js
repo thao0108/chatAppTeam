@@ -23,11 +23,13 @@ const App = () => {
     return (
         <>
             <header className={classes.App}>head</header>
-            
+
             <AuthProvider>
                 <Router>
                     <Menubar/>
                     <Container>
+
+=======
                     <Switch>
                         <Route exact path='/Login' component={Login} />
                         <Route exact path='/SignUp' component={SignUp} />
