@@ -15,7 +15,7 @@ const Room = () => {
 
     useEffect(() => {
         firebase.firestore().collection('messages')
-            // .orderBy('timestamp', 'desc')
+            .orderBy('date', 'asc')
             .onSnapshot((snapshot) => {
                 const messages = snapshot.docs.map(doc => {
                     return doc.data()
