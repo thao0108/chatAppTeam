@@ -65,7 +65,7 @@ const Room = () => {
                                 <div className={styles.avatar}>
                                     <img src={message.image ? message.image : NoProfile} className={styles.image} alt="チャットアイコン" />
                                 </div>
-                                <div>
+                                <div className={styles.userName}>
                                     {message.user}<br />
                                     <div className={styles.chat}>
                                         {message.content}
@@ -78,20 +78,20 @@ const Room = () => {
                 }
             </ul>
             <form onSubmit={handleSubmit}>
-                   <div className={styles.flex}>
-                        <div className={styles.avatar}>
-                            <img src={image ? image : NoProfile} className={styles.image} alt="チャットアイコン" />
-                        </div>
-                        <div>
-                            <input
-                                type='text'
-                                value={value}
-                                placeholder="メッセージ入力"
-                                onChange={e => setValue(e.target.value)}
-                            />
-                             <button type="submit">送信</button>
-                        </div>
-                    </div> 
+                <div className={styles.flex}>
+                    <div className={styles.avatar}>
+                        <img src={image ? image : NoProfile} className={styles.image} alt="チャットアイコン" />
+                    </div>
+                    <div>
+                        <input
+                            type='text'
+                            value={value}
+                            placeholder="メッセージ入力"
+                            onChange={e => setValue(e.target.value)}
+                        />
+                        <button type="submit">送信</button>
+                    </div>
+                </div>
             </form>
 
         </>

@@ -26,7 +26,7 @@ const TabList = () => {
                         <br></br>
                         <li>運動不足解消！効果ありました<br></br>
                             <br></br>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/KFBNhGs7Y-s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="400" height="250" src="https://www.youtube.com/embed/KFBNhGs7Y-s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </li>
                         <br></br>
                     </ul>
@@ -36,19 +36,19 @@ const TabList = () => {
                 </Tab>
                 <Tab eventKey="ファムフォンタオ" title="ファムフォンタオ" >
                     <ul>
-                        <br/>
+                        <br />
                         <li>
                             わかりやすくReactについて解説してます。
-                            <br/>
+                            <br />
                             チャットボットを作ったりハンズオンで教えているのでおすすめです。
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
                             <iframe width="400" height="250" src="https://www.youtube.com/embed/Otrc2zAlJyM" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </li>
-                        <br/>
+                        <br />
                         <li>
                             基本的なwebの知識をイラストを交えながら解説してくれる本です。
-                            <br/>
+                            <br />
                             <a href="https://www.amazon.co.jp/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E5%9B%B3%E8%A7%A3%E5%BC%8F-%E3%81%93%E3%81%AE%E4%B8%80%E5%86%8A%E3%81%A7%E5%85%A8%E9%83%A8%E3%82%8F%E3%81%8B%E3%82%8BWeb%E6%8A%80%E8%A1%93%E3%81%AE%E5%9F%BA%E6%9C%AC-%E5%B0%8F%E6%9E%97-%E6%81%AD%E5%B9%B3-ebook/dp/B06XNMMC9S">
                                 web技術の基本
                             </a>

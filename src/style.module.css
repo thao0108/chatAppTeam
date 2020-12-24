@@ -1,10 +1,22 @@
-.App {
+.header {
     background-color: #343a40;
-    color: skyblue;
+    color: #90ee90;
     text-align: center;
 }
 
 .Room {
     display: block;
     margin:0 0 0 auto;
+}
+
+.logo {
+    background-color: #343a40;
+    width: 180px;
+}
+
+.footer {
+    background-color: #343a40;
+    color: #90ee90;
+    text-align: center;
+    line-height: 60px;
 }

@@ -17,13 +17,17 @@ import LoggedInRoute from './LoggedInRoute'
 import classes from './style.module.css'
 import Menubar from './Menubar'
 import Writings from './writings/Writings'
+import logo from './img/logo.png'
 
 
 const App = () => {
     return (
         <>
-            <header className={classes.App}>head</header>
-
+            <header>
+                <div className={classes.header}>
+                    <img src={logo} className={classes.logo} />
+                </div>
+            </header>
             <AuthProvider>
                 <Router>
                     <Menubar />
@@ -39,7 +43,7 @@ const App = () => {
                     </Container>
                 </Router>
             </AuthProvider>
-            <footer className={classes.App}>footer</footer>
+            <footer className={classes.footer}>2021年1月17日卒業</footer>
         </>
     )
 }
