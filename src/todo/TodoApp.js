@@ -2,10 +2,22 @@ import React, { useState } from 'react'
 import Form from './Form'
 import List from './List'
 import shortid from 'shortid'
+import classes from '../todo.module.css'
 
 const TodoApp = () => {
     const [todos, setTodos] = useState([
-        //...
+        {
+            content: '課題をする',
+            id: shortid.generate()
+        },
+        {
+            content: '洗濯をする',
+            id: shortid.generate()
+        },
+        {
+            content: '電話をする',
+            id: shortid.generate()
+        }
     ])
 
     const addTodo = content => {
@@ -25,7 +37,7 @@ const TodoApp = () => {
     return (
         <>
             <body>
-                <h1>Todoリスト</h1>
+                <h1 className={classes.todolist}>Todoリスト</h1>
                 <Form addTodo={addTodo} />
                 <List todos={todos} deleteTodo={deleteTodo} />
             </body>

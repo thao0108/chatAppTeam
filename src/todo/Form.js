@@ -10,7 +10,7 @@ const Form = ({ addTodo }) => {
     return (
         <form onSubmit={handleSubmit}>
             <input type='text'
-                type='text'
+            placeholder="やることを入力"
                 onChange={e => {
                     setValue(e.target.value)
                 }}
