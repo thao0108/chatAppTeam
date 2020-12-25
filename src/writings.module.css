@@ -1,0 +1,29 @@
+.tbl {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.tbl th {
+  font-size: 1rem;
+  background: #e9727e;
+  border: solid 1px #ccc;
+  color: #fff;
+  padding: 10px;  
+  height: 20px;
+  text-align: center;
+}
+.tbl td {
+    background-color: #f3f0ef;
+}
+
+.name_goal {
+  width: 23%;
+}
+
+.impressions {
+  width: 54%;  
+}
+
+.impression {
+ font-size: 14px;
+}
