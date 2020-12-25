@@ -32,7 +32,7 @@ const TabList = () => {
                     </ul>
                 </Tab>
                 <Tab eventKey="高野　大梧" title="高野　大梧">
-                    <ul>
+                <ul>
                         <br />
                         <li>
                             Reactの基礎について解説しています
