@@ -56,7 +56,7 @@ const Room = () => {
 
     return (
         <>
-            <h1>Room</h1>
+            <h1>Chat</h1>
             <ul>
                 {
                     messages ?
