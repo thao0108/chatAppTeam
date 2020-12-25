@@ -6,11 +6,12 @@ const Form = ({ addTodo }) => {
     const handleSubmit = e => {
         e.preventDefault()
         addTodo(value)
+        setValue('')
     }
     return (
         <form onSubmit={handleSubmit}>
             <input type='text'
-                type='text'
+                value={value}
                 onChange={e => {
                     setValue(e.target.value)
                 }}
