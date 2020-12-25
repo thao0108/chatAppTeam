@@ -1,13 +1,14 @@
 import React from 'react';
 import { Tabs, Tab } from 'react-bootstrap';
+import styles from '../rec.module.css'
 
 const TabList = () => {
     const tabsId = 'uncontrolled-tab-example';
     return (
         <>
             <h1>おすすめ</h1>
-            <Tabs defaultActiveKey="鎌田　希望" id={tabsId} className="mt-2">
-                <Tab eventKey="鎌田　希望" title="鎌田　希望">
+            <Tabs defaultActiveKey="鎌田希望" id={tabsId} className={styles.size}>
+                <Tab eventKey="鎌田希望" title="鎌田希望" >
                     <ul>
                         <br></br>
                         <li>プログラミング初心者に分かりやすくイラストでweb用語を解説してくれます<br></br>
@@ -31,7 +32,7 @@ const TabList = () => {
                         <br></br>
                     </ul>
                 </Tab>
-                <Tab eventKey="高野　大梧" title="高野　大梧">
+                <Tab eventKey="高野大梧" title="高野大梧">
                 <ul>
                         <br />
                         <li>
@@ -73,7 +74,6 @@ const TabList = () => {
                                 web技術の基本
                             </a>
                         </li>
-
                     </ul>
                 </Tab>
             </Tabs>
