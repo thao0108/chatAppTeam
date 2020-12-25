@@ -6,7 +6,7 @@ const TabList = () => {
     return (
         <>
             <h1>おすすめ</h1>
-            <Tabs defaultActiveKey="home" id={tabsId} className="mt-2">
+            <Tabs defaultActiveKey="鎌田　希望" id={tabsId} className="mt-2">
                 <Tab eventKey="鎌田　希望" title="鎌田　希望">
                     <ul>
                         <br></br>
