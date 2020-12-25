@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Form from './Form'
 import List from './List'
-import shortid from 'shortid'
+// import shortid from 'shortid'
 
 const TodoApp = () => {
     const [todos, setTodos] = useState([
@@ -13,7 +13,7 @@ const TodoApp = () => {
             ...todos,
             {
                 content: content,
-                id: shortid.generate()
+                // id: shortid.generate()
             }
         ])
     }
