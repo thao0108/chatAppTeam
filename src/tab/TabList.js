@@ -32,7 +32,27 @@ const TabList = () => {
                     </ul>
                 </Tab>
                 <Tab eventKey="高野　大梧" title="高野　大梧">
-                    {/* おすすめ機能内容 */}
+                <ul>
+                        <br />
+                        <li>
+                            Reactの基礎について解説しています
+                            <br />
+                            <br />
+                            忘備録として使えると思います！
+                            <br />
+                            <a href="https://qiita.com/tsuuuuu_san/items/58f82201ded0da420201">Reactの基礎を学ぶ</a>
+                        </li>
+                        <br />
+                        <br />
+                        <li>
+                            gitについてマンガで解説してます
+                            <br />
+                            <br />
+                            根本的な部分から分かりやすく書かれているのでおすすめです!
+                            <br />
+                            <a href="https://www.r-staffing.co.jp/engineer/entry/20190621_1">第1話 リポジトリを作ってコミットしてみよう【連載】マンガでわかるGit ～コマンド編～</a>
+                        </li>
+                    </ul>
                 </Tab>
                 <Tab eventKey="ファムフォンタオ" title="ファムフォンタオ" >
                     <ul>
