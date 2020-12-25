@@ -11,8 +11,9 @@ const Form = ({ addTodo }) => {
     return (
         <form onSubmit={handleSubmit}>
             <input type='text'
-                value={value}
-                onChange={e => {
+             placeholder="やることを入力"
+             value={value}
+             onChange={e => {
                     setValue(e.target.value)
                 }}
             />
