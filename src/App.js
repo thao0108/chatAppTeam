@@ -18,6 +18,7 @@ import classes from './style.module.css'
 import Menubar from './Menubar'
 import Writings from './writings/Writings'
 import logo from './img/logo.png'
+import TodoApp from './todo/TodoApp'
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
                             <Route exact path='/Login' component={Login} />
                             <Route exact path='/SignUp' component={SignUp} />
                             <LoggedInRoute exact path='/' component={Room} />
+                            <Route exact path='/todo' component={TodoApp} />
                             <Route exact path='/album' component={Writings} />
                             <Route exact path='/profile' component={Profile} />
                             <Route exact path='/recommend' component={TabList} />
