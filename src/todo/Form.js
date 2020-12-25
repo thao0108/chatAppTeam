@@ -6,12 +6,14 @@ const Form = ({ addTodo }) => {
     const handleSubmit = e => {
         e.preventDefault()
         addTodo(value)
+        setValue('')
     }
     return (
         <form onSubmit={handleSubmit}>
             <input type='text'
-            placeholder="やることを入力"
-                onChange={e => {
+             placeholder="やることを入力"
+             value={value}
+             onChange={e => {
                     setValue(e.target.value)
                 }}
             />
