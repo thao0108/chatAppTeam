@@ -1,5 +1,7 @@
 .logo_aria {
-    width: 60px;
+    max-width: 100px;
+    width: 20%;
+
 }
 .logo {
     width: 100%;
