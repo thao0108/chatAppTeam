@@ -4,8 +4,6 @@ import firebase from './config/firebase'
 import styles from './Menu.module.css'
 import logo from './img/logo.png'
 
-
-
 const Menubar = () => {
     return(
     <>
@@ -28,6 +26,6 @@ const Menubar = () => {
           </Navbar.Collapse>
       </Navbar>
     </>
-     )
+  )
 };
 export default Menubar;
