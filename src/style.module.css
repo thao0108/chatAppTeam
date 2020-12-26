@@ -1,7 +1,13 @@
-.header {
+header {
     background-color: #343a40;
-    color: #90ee90;
+}
+
+.header {
     text-align: center;
+}
+
+header form {
+    text-align: right;
 }
 
 .Room {
