@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tabs, Tab } from 'react-bootstrap';
+import { Tabs, Tab, Container } from 'react-bootstrap';
 import styles from '../rec.module.css'
 
 const TabList = () => {
@@ -9,7 +9,7 @@ const TabList = () => {
             <h1>おすすめ</h1>
             <Tabs defaultActiveKey="鎌田希望" id={tabsId} className={styles.size}>
                 <Tab eventKey="鎌田希望" title="鎌田希望" >
-                    <ul>
+                    <ul className="pr-4">
                         <br></br>
                         <li>プログラミング初心者に分かりやすくイラストでweb用語を解説してくれます<br></br>
                             <br></br>
@@ -27,13 +27,13 @@ const TabList = () => {
                         <br></br>
                         <li>運動不足解消！効果ありました<br></br>
                             <br></br>
-                            <iframe width="400" height="250" src="https://www.youtube.com/embed/KFBNhGs7Y-s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="300" height="180" src="https://www.youtube.com/embed/KFBNhGs7Y-s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </li>
                         <br></br>
                     </ul>
                 </Tab>
                 <Tab eventKey="高野大梧" title="高野大梧">
-                <ul>
+                <ul className="pr-4">
                         <br />
                         <li>
                             Reactの基礎について解説しています
@@ -56,7 +56,7 @@ const TabList = () => {
                     </ul>
                 </Tab>
                 <Tab eventKey="ファムフォンタオ" title="ファムフォンタオ" >
-                    <ul>
+                    <ul className="pr-4">
                         <br />
                         <li>
                             わかりやすくReactについて解説してます。
@@ -64,7 +64,7 @@ const TabList = () => {
                             チャットボットを作ったりハンズオンで教えているのでおすすめです。
                             <br />
                             <br />
-                            <iframe width="400" height="250" src="https://www.youtube.com/embed/Otrc2zAlJyM" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe width="300" height="180" src="https://www.youtube.com/embed/Otrc2zAlJyM" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </li>
                         <br />
                         <li>
