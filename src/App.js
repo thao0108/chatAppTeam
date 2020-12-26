@@ -30,7 +30,7 @@ const App = () => {
                     <img src={logo} className={classes.logo} />
                 </div>
                 <form>
-                    <Button variant="dark" onClick={() => firebase.auth().signOut()}>Logout</Button>
+                    <Button variant="dark" onClick={() => firebase.auth().signOut()}><i className="fas fa-sign-out-alt"></i>Logout</Button>
                 </form>
             </header>
             <AuthProvider>
