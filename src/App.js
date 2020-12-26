@@ -19,7 +19,8 @@ import Menubar from './Menubar'
 import Writings from './writings/Writings'
 import logo from './img/logo.png'
 import TodoApp from './todo/TodoApp'
-
+import { Button } from 'react-bootstrap';
+import firebase from './config/firebase';
 
 const App = () => {
     return (
@@ -28,6 +29,9 @@ const App = () => {
                 <div className={classes.header}>
                     <img src={logo} className={classes.logo} />
                 </div>
+                <form>
+                    <Button variant="dark" onClick={() => firebase.auth().signOut()}>Logout</Button>
+                </form>
             </header>
             <AuthProvider>
                 <Router>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Navbar, Nav, Form, Button } from 'react-bootstrap';
-import firebase from './config/firebase';
+import { Navbar, Nav } from 'react-bootstrap';
+
 
 
 const Menubar = () => {
-    return(
-      <>
-        <Navbar bg="dark" variant="dark"> 
+  return (
+    <>
+      <Navbar bg="dark" variant="dark">
         <Nav className="mr-auto">
           <Nav.Link href="/">CHAT</Nav.Link>
           <Nav.Link href="/todo">TODO</Nav.Link>
@@ -14,11 +14,8 @@ const Menubar = () => {
           <Nav.Link href="/recommend">おすすめ</Nav.Link>
           <Nav.Link href="/profile">PROFILE</Nav.Link>
         </Nav>
-        <Form inline>
-          <Button variant="dark" onClick={() => firebase.auth().signOut()}>Logout</Button>
-        </Form>
       </Navbar>
     </>
-     )
+  )
 };
 export default Menubar;
