@@ -27,8 +27,15 @@ const Room = () => {
         firebase.storage().ref().child(`image/${user.uid}/profile`)
             .getDownloadURL().then((downloadURL) => {
                 setImage(downloadURL)
-            })
+            })    
     }, [user])
+
+    useEffect(() => {
+        const scrollArea = document.getElementById('scroll-area')
+        if(scrollArea) {
+            scrollArea.scrollIntoView()
+        }
+    })
 
 
 
@@ -57,7 +64,7 @@ const Room = () => {
     return (
         <>
             <h1>Chat</h1>
-            <ul>
+            <ul id={'scroll-area'}>
                 {
                     messages ?
                         messages.map((message, index) => (
@@ -93,7 +100,6 @@ const Room = () => {
                     </div>
                 </div>
             </form>
-
         </>
     )
 }

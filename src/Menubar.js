@@ -9,7 +9,7 @@ import logo from './img/logo.png'
 const Menubar = () => {
     return(
     <>
-      <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg"> 
+      <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg" sticky="top"> 
         <Navbar.Brand href="/" className={styles.logo_aria}>
             <img src={logo} className={styles.logo} alt="ロゴ"/>
         </Navbar.Brand>
