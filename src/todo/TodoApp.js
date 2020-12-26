@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 import Form from './Form'
 import List from './List'
-import shortid from 'shortid'
+// import shortid from 'shortid'
 import classes from '../todo.module.css'
 
 const TodoApp = () => {
     const [todos, setTodos] = useState([
         {
             content: '課題をする',
-            id: shortid.generate()
+            // id: shortid.generate()
         },
         {
             content: '洗濯をする',
-            id: shortid.generate()
+            // id: shortid.generate()
         },
         {
             content: '電話をする',
-            id: shortid.generate()
+            // id: shortid.generate()
         }
     ])
 
@@ -25,7 +25,7 @@ const TodoApp = () => {
             ...todos,
             {
                 content: content,
-                id: shortid.generate()
+                // id: shortid.generate()
             }
         ])
     }
