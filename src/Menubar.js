@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import { Navbar, Nav, Form, Button } from 'react-bootstrap';
-import firebase from './config/firebase'
+import { Navbar, Nav } from 'react-bootstrap';
 import styles from './Menu.module.css'
 import logo from './img/logo.png'
 import { AuthContext } from './AuthService'
@@ -8,7 +7,6 @@ import { AuthContext } from './AuthService'
 
 const Menubar = () => {
   const user = useContext(AuthContext)
-  // メニューオブジェクトを作ってmapで回してみる
   
   return (
     <>
@@ -30,7 +28,7 @@ const Menubar = () => {
             </Nav>
             </Navbar.Collapse>
         </>
-              } 
+         }
       </Navbar>
     </>
   )
