@@ -25,21 +25,15 @@ const TabList = () => {
                         <br></br>
                         <li>運動不足解消！効果ありました<br></br>
                             <br></br>
-<<<<<<< HEAD
-                            <iframe width="300" height="180" src="https://www.youtube.com/embed/KFBNhGs7Y-s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-=======
+
                             <iframe width="300" height="200" src="https://www.youtube.com/embed/KFBNhGs7Y-s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
->>>>>>> 17aafc8c94390f6a4cb15d9a37c7a9890adc6ad5
                         </li>
                         <br></br>
                     </ul>
                 </Tab>
                 <Tab eventKey="高野大梧" title="高野大梧">
-<<<<<<< HEAD
-                <ul className="pr-4">
-=======
+
                     <ul>
->>>>>>> 17aafc8c94390f6a4cb15d9a37c7a9890adc6ad5
                         <br />
                         <li>
                             Reactの基礎について解説しています
@@ -70,11 +64,7 @@ const TabList = () => {
                             チャットボットを作ったりハンズオンで教えているのでおすすめです。
                             <br />
                             <br />
-<<<<<<< HEAD
-                            <iframe width="300" height="180" src="https://www.youtube.com/embed/Otrc2zAlJyM" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-=======
                             <iframe width="300" height="200" src="https://www.youtube.com/embed/Otrc2zAlJyM" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
->>>>>>> 17aafc8c94390f6a4cb15d9a37c7a9890adc6ad5
                         </li>
                         <br />
                         <li>
