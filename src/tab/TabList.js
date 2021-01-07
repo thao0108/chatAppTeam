@@ -11,7 +11,7 @@ const TabList = () => {
                 <Tab eventKey="鎌田希望" title="鎌田希望" >
                     <ul className="pr-4">
                         <br></br>
-                        <li>プログラミング初心者に分かりやすくイラストでweb用語を解説してくれます<br></br>
+                        <li>プログラミング初心者に分かりやすくイラストでWEB用語を解説してくれます<br></br>
                             <br></br>
                             <a href="https://wa3.i-3-i.info/index.html">「分かりそう」で「分からない」でも「分かった」気になれるIT用語辞典</a>
                             <br></br><br></br>
