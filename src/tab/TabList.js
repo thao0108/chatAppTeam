@@ -36,10 +36,10 @@ const TabList = () => {
                     <ul>
                         <br />
                         <li>
-                            Reactの基礎について解説しています
+                            Reactの基礎について解説しています!
                             <br />
                             <br />
-                            忘備録として使えると思います！
+                            忘備録として使えると思います！！
                             <br />
                             <a href="https://qiita.com/tsuuuuu_san/items/58f82201ded0da420201">Reactの基礎を学ぶ</a>
                         </li>
