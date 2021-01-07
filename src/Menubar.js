@@ -7,7 +7,7 @@ import { AuthContext } from './AuthService'
 
 const Menubar = () => {
   const user = useContext(AuthContext)
-  
+
   return (
     <>
       <Navbar bg="dark" variant="dark" collapseOnSelect expand="lg" sticky="top">
@@ -29,6 +29,7 @@ const Menubar = () => {
             </Navbar.Collapse>
         </>
          }
+
       </Navbar>
     </>
   )
