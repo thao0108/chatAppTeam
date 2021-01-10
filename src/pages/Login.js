@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
+import googlelogin from '../img/btn_google_signin_light_focus_web.png'
 
 const Login = ({ history }) => {
     const [email, setEmail] = useState('')
@@ -18,6 +19,17 @@ const Login = ({ history }) => {
             })
     }
     const user = useContext(AuthContext)
+
+    const signInWithGoogle = () => {
+        const provider = new firebase.auth.GoogleAuthProvider()
+        firebase.auth().signInWithPopup(provider)
+            .then(user => {
+                history.push("/") //"/"に遷移
+            })
+            .catch(error => {
+                alert(error.message)
+            })
+    }
 
     if (user) {
         return <Redirect to="/" />
@@ -54,6 +66,9 @@ const Login = ({ history }) => {
                 <button type='submit'>Login</button>
             </form>
             <div><a href="/signup">新規登録</a></div>
+            {/* <div className={}> lineloginと合わせて設定する*/}
+            <img src={googlelogin} onClick={() => signInWithGoogle()} alt="google signin" />
+            {/* </div> */}
         </>
     )
 }
