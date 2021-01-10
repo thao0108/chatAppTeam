@@ -1,37 +1,46 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Form from './Form'
 import List from './List'
-import shortid from 'shortid'
+// import shortid from 'shortid'
+import firebase from '../config/firebase'
 import classes from '../todo.module.css'
 
 const TodoApp = () => {
-    const [todos, setTodos] = useState([
-        {
-            content: '課題をする',
-            id: shortid.generate()
-        },
-        {
-            content: '洗濯をする',
-            id: shortid.generate()
-        },
-        {
-            content: '電話をする',
-            id: shortid.generate()
-        }
-    ])
+    const [todos, setTodos] = useState([]);
 
-    const addTodo = content => {
+    useEffect(() => {
+        firebase.firestore().collection('todos')
+        .onSnapshot((snapshot) => {
+            const todos = snapshot.docs.map(doc => {
+                return doc.data()
+            })
+        setTodos(todos)
+    })
+    }, [])
+
+const addTodo = content => {
+    const id = firebase.firestore().collection('todos').doc().id
+
+    const todoData = {
+        content: content,
+        id: id,
+        isDone: false  
+    }
+
+    firebase.firestore().collection('todos').doc(id).set(todoData)
         setTodos([
             ...todos,
             {
-                content: content,
-                id: shortid.generate()
+                ...todoData
             }
         ])
     }
 
     const deleteTodo = id => {
-        setTodos(todos.filter(todo => todo.id !== id))
+        firebase.firestore().collection("todos").doc(id).delete()
+        .then(() => {
+            setTodos(todos.filter(todo => todo.id !== id))
+        })
     }
 
     return (
