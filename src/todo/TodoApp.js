@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Form from './Form'
 import List from './List'
-// import shortid from 'shortid'
 import firebase from '../config/firebase'
 import classes from '../todo.module.css'
 
