@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import firebase from '../config/firebase'
 import { AuthContext } from '../AuthService'
 import googlelogin from '../img/btn_google_signin_light_focus_web.png'
+import facebooklogin from '../img/fb_button.png'
 
 const Login = ({ history }) => {
     const [email, setEmail] = useState('')
@@ -30,6 +31,23 @@ const Login = ({ history }) => {
                 alert(error.message)
             })
     }
+
+/*-------------------------facebook-------------------------- */
+    const signInWithFacebook = () => {
+        const provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().signInWithPopup(provider)
+            .then((result) => {
+                /** @type {firebase.auth.OAuthCredential} */
+                var credential = result.credential;// The signed-in user info.
+                var user = result.user;// This gives you a Facebook Access Token. You can use it to access the Facebook API.
+                var accessToken = credential.accessToken;
+            })
+            .catch((error) => {
+                    alert(error.message);
+        }); 
+    }
+    
+/*----------------------------------------------------------- */
 
     if (user) {
         return <Redirect to="/" />
@@ -69,6 +87,7 @@ const Login = ({ history }) => {
             {/* <div className={}> lineloginと合わせて設定する*/}
             <img src={googlelogin} onClick={() => signInWithGoogle()} alt="google signin" />
             {/* </div> */}
+            <img src={facebooklogin} onClick={() => signInWithFacebook()} alt="facebook signin" />
         </>
     )
 }
